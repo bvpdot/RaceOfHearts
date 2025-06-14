@@ -1,11 +1,11 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
-let xJogador = [0, 0, 0, 0, 0, 0];
-let yJogador = [75, 140, 205, 275, 350];
-let jogador = ["❤️", "💟", "💗", "💘", "💕"];
-let teclas = ["a", "s", "d", "f", "g"];
+let xJogador = [0, 0, 0, 0, 0, 0, 0];
+let yJogador = [75, 140, 205, 275, 350, 415, 480];	   
+let jogador = ["❤️", "💕", "💗", "💙", "💜", "💛", "🤍"];
+let teclas = ["a", "s", "d", "f", "g", "h", "j"];
 let quantidade = jogador.length;
 
 function draw() {
@@ -32,10 +32,11 @@ function desenhaJogadores() {
 
 function desenhaLinhaDeChegada() {
   fill("white");
-  rect(350, 0, 10, 400);
+  rect(width - 50, 0, 10, height); // linha branca do topo até a base da tela
+
   fill("black");
-  for (let yAtual = 0; yAtual < 400; yAtual += 20) {
-    rect(350, yAtual, 10, 10);
+  for (let yAtual = 0; yAtual < height; yAtual += 20) {
+    rect(width - 50, yAtual, 10, 10); // quadrados pretos intercalados
   }
 }
 
