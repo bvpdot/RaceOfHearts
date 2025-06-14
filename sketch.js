@@ -42,7 +42,7 @@ function desenhaLinhaDeChegada() {
 
 function verificaVencedor() {
   for (let i = 0; i < quantidade; i++) {
-    if (xJogador[i] > 350) {
+    if (xJogador[i] > width) {
       text("heart:" + jogador[i] + "win!", 70, 200);
       noLoop();
     }
